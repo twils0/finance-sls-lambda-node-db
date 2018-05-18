@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`functions aws ses parseEmailBody fails and returns unexpected error, missing s3 get object 1`] = `"unexpected error - missing s3 get object result body"`;
+
+exports[`functions aws ses parseEmailBody fails and returns unexpected error, text/plain content-type not available 1`] = `"unexpected error - text/plain content-type not available"`;
+
+exports[`functions aws ses parseEmailBody fails and returns unexpected error, unable to parse body 1`] = `"unexpected error - unable to parse body"`;
+
+exports[`functions aws ses parseEmailBody fails and returns unexpected error, unable to parse tickerCusip 1`] = `"unexpected error - unable to parse tickerCusip"`;

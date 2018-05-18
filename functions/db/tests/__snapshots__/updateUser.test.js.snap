@@ -1,0 +1,121 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`functions db updateUser correctly returns existing email_ver and email_additional_ver, when emailVerified and emailAdditionalVerified equal to false, db returns existing email_ver and email_additional_ver 1`] = `
+"SELECT email, email_ver, email_additional_ver
+        FROM \\"user\\".\\"user\\"
+        WHERE user_id = $1::uuid;"
+`;
+
+exports[`functions db updateUser correctly updates email and email_additional, when provided email and emailAdditional 1`] = `
+"SELECT email
+        FROM \\"user\\".\\"user\\"
+        WHERE user_id = $1::uuid;"
+`;
+
+exports[`functions db updateUser correctly updates email and email_additional, when provided email and emailAdditional 2`] = `
+"UPDATE \\"user\\".\\"user\\" SET
+      email = $2::text,
+      email_additional = $3::text
+      WHERE user_id = $1::uuid;"
+`;
+
+exports[`functions db updateUser correctly updates email, when provided email 1`] = `
+"SELECT email
+        FROM \\"user\\".\\"user\\"
+        WHERE user_id = $1::uuid;"
+`;
+
+exports[`functions db updateUser correctly updates email, when provided email 2`] = `
+"UPDATE \\"user\\".\\"user\\" SET
+      email = $2::text
+      WHERE user_id = $1::uuid;"
+`;
+
+exports[`functions db updateUser correctly updates email_additional, when provided emailAdditional 1`] = `
+"UPDATE \\"user\\".\\"user\\" SET
+      email_additional = $2::text
+      WHERE user_id = $1::uuid
+      RETURNING email;"
+`;
+
+exports[`functions db updateUser correctly updates email_additional_ver, when emailAdditionalVerified equals false, db returns email_additional_ver as null 1`] = `
+"SELECT email, email_additional_ver
+        FROM \\"user\\".\\"user\\"
+        WHERE user_id = $1::uuid;"
+`;
+
+exports[`functions db updateUser correctly updates email_additional_ver, when emailAdditionalVerified equals false, db returns email_additional_ver as null 2`] = `
+"UPDATE \\"user\\".\\"user\\" SET
+          email_additional_ver = $2::uuid
+          WHERE user_id = $1::uuid;"
+`;
+
+exports[`functions db updateUser correctly updates email_additional_ver, when emailAdditionalVerified equals false, db returns existing email_additional_ver 1`] = `
+"SELECT email, email_additional_ver
+        FROM \\"user\\".\\"user\\"
+        WHERE user_id = $1::uuid;"
+`;
+
+exports[`functions db updateUser correctly updates email_additional_ver, when provided verificationId 1`] = `
+"UPDATE \\"user\\".\\"user\\" 
+      SET email_ver = CASE WHEN email_ver = $1::uuid
+      THEN NULL ELSE email_ver END,
+      email_additional_ver = CASE WHEN email_additional_ver = $1::uuid
+      THEN NULL ELSE email_additional_ver END
+      WHERE email_ver = $1::uuid
+      OR email_additional_ver = $1::uuid
+      RETURNING user_id;"
+`;
+
+exports[`functions db updateUser correctly updates email_additional_ver, when provided verificationId 2`] = `
+"SELECT email, email_ver, email_additional_ver
+        FROM \\"user\\".\\"user\\"
+        WHERE user_id = $1::uuid"
+`;
+
+exports[`functions db updateUser correctly updates email_ver and email_additional_ver, when provided emailVerified and emailAdditionalVerified, db returns email_ver and email_additional_ver as null 1`] = `
+"SELECT email, email_ver, email_additional_ver
+        FROM \\"user\\".\\"user\\"
+        WHERE user_id = $1::uuid;"
+`;
+
+exports[`functions db updateUser correctly updates email_ver, when provided emailVerified, db returns email_ver as null 1`] = `
+"SELECT email, email_ver
+        FROM \\"user\\".\\"user\\"
+        WHERE user_id = $1::uuid;"
+`;
+
+exports[`functions db updateUser correctly updates email_ver, when provided emailVerified, db returns email_ver as null 2`] = `
+"UPDATE \\"user\\".\\"user\\" SET
+          email_ver = $2::uuid
+          WHERE user_id = $1::uuid;"
+`;
+
+exports[`functions db updateUser correctly updates email_ver, when provided emailVerified, db returns exisitng email_ver 1`] = `
+"SELECT email, email_ver
+        FROM \\"user\\".\\"user\\"
+        WHERE user_id = $1::uuid;"
+`;
+
+exports[`functions db updateUser correctly updates email_ver, when provided verificationId 1`] = `
+"UPDATE \\"user\\".\\"user\\" 
+      SET email_ver = CASE WHEN email_ver = $1::uuid
+      THEN NULL ELSE email_ver END,
+      email_additional_ver = CASE WHEN email_additional_ver = $1::uuid
+      THEN NULL ELSE email_additional_ver END
+      WHERE email_ver = $1::uuid
+      OR email_additional_ver = $1::uuid
+      RETURNING user_id;"
+`;
+
+exports[`functions db updateUser correctly updates email_ver, when provided verificationId 2`] = `
+"SELECT email, email_ver, email_additional_ver
+        FROM \\"user\\".\\"user\\"
+        WHERE user_id = $1::uuid"
+`;
+
+exports[`functions db updateUser fails and returns unexpected error, when global.pool.query throws error, when provided email and null email additional 1`] = `
+"SELECT email
+        FROM \\"user\\".\\"user\\"
+        WHERE user_id = $1::uuid;"
+`;

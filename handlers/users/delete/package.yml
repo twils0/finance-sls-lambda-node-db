@@ -1,0 +1,8 @@
+include:
+  - handlers/users/delete/handler.js
+  - functions/aws/aws.config.json
+  - functions/aws/testAuth.js
+  - functions/aws/getSecret.js
+  - functions/db/loadPool.js
+  - functions/db/deleteUser.js
+  - functions/errorResponse.js

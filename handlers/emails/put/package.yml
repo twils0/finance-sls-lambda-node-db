@@ -1,0 +1,8 @@
+include:
+  - handlers/emails/put/handler.js
+  - functions/aws/aws.config.json 
+  - functions/aws/getSecret.js
+  - functions/aws/adminUpdateUserAttributes.js
+  - functions/db/loadPool.js
+  - functions/db/updateUser.js
+  - functions/errorResponse.js

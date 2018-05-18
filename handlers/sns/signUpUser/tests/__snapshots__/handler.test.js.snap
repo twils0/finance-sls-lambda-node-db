@@ -1,0 +1,204 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`handlers sns signUpUser correctly signs up user 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "loadPool
+",
+    ],
+    Array [
+      "parseSNS
+",
+    ],
+    Array [
+      "addUser
+",
+      Object {
+        "email": "test1@test.com",
+        "emailAdditional": "test2@test.com",
+      },
+      "
+",
+    ],
+    Array [
+      "addUser - success
+",
+    ],
+    Array [
+      "signUp
+",
+      Object {
+        "email": "test1@test.com",
+        "emailAdditional": "test2@test.com",
+      },
+      "
+",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+  ],
+}
+`;
+
+exports[`handlers sns signUpUser fails and returns error, when addUser throws error 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "loadPool
+",
+    ],
+    Array [
+      "parseSNS
+",
+    ],
+    Array [
+      "addUser
+",
+      Object {
+        "email": "test1@test.com",
+        "emailAdditional": "test2@test.com",
+      },
+      "
+",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+  ],
+}
+`;
+
+exports[`handlers sns signUpUser fails and returns error, when loadPool throws error 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "loadPool
+",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+  ],
+}
+`;
+
+exports[`handlers sns signUpUser fails and returns error, when parseSNS throws error 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "loadPool
+",
+    ],
+    Array [
+      "parseSNS
+",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+  ],
+}
+`;
+
+exports[`handlers sns signUpUser fails and returns error, when signUp throws error 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "loadPool
+",
+    ],
+    Array [
+      "parseSNS
+",
+    ],
+    Array [
+      "addUser
+",
+      Object {
+        "email": "test1@test.com",
+        "emailAdditional": "test2@test.com",
+      },
+      "
+",
+    ],
+    Array [
+      "addUser - success
+",
+    ],
+    Array [
+      "signUp
+",
+      Object {
+        "email": "test1@test.com",
+        "emailAdditional": "test2@test.com",
+      },
+      "
+",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+  ],
+}
+`;

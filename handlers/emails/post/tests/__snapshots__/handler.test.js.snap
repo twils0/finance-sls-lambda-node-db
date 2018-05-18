@@ -1,0 +1,396 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`handlers emails post correctly sends templated email or emails, with email additional needed 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "testAuth
+",
+    ],
+    Array [
+      "loadPool
+",
+    ],
+    Array [
+      "updateUser
+",
+      Object {
+        "emailAdditionalVerified": "false",
+        "emailVerified": "true",
+      },
+      "
+",
+    ],
+    Array [
+      "updateUser - success
+",
+      undefined,
+      "
+",
+      "7cfcfcc9-0e50-4a0b-90a7-d340a2e51960",
+      "
+",
+    ],
+    Array [
+      "sendTemplatedEmail
+",
+      "verificationEmailTemplate",
+      "
+",
+      Object {
+        "verificationId": "7cfcfcc9-0e50-4a0b-90a7-d340a2e51960",
+      },
+      "
+",
+      Array [
+        "test2@test.com",
+      ],
+      "
+",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+  ],
+}
+`;
+
+exports[`handlers emails post correctly sends templated email or emails, with email and email additional needed 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "testAuth
+",
+    ],
+    Array [
+      "loadPool
+",
+    ],
+    Array [
+      "updateUser
+",
+      Object {
+        "emailAdditionalVerified": "false",
+        "emailVerified": "false",
+      },
+      "
+",
+    ],
+    Array [
+      "updateUser - success
+",
+      "43663f5d-a27c-4e1f-8d22-0b0f42b1b27a",
+      "
+",
+      "7cfcfcc9-0e50-4a0b-90a7-d340a2e51960",
+      "
+",
+    ],
+    Array [
+      "sendTemplatedEmail
+",
+      "verificationEmailTemplate",
+      "
+",
+      Object {
+        "verificationId": "43663f5d-a27c-4e1f-8d22-0b0f42b1b27a",
+      },
+      "
+",
+      Array [
+        "test1@test.com",
+      ],
+      "
+",
+    ],
+    Array [
+      "sendTemplatedEmail
+",
+      "verificationEmailTemplate",
+      "
+",
+      Object {
+        "verificationId": "7cfcfcc9-0e50-4a0b-90a7-d340a2e51960",
+      },
+      "
+",
+      Array [
+        "test2@test.com",
+      ],
+      "
+",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+  ],
+}
+`;
+
+exports[`handlers emails post correctly sends templated email or emails, with email needed 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "testAuth
+",
+    ],
+    Array [
+      "loadPool
+",
+    ],
+    Array [
+      "updateUser
+",
+      Object {
+        "emailVerified": "false",
+      },
+      "
+",
+    ],
+    Array [
+      "updateUser - success
+",
+      "43663f5d-a27c-4e1f-8d22-0b0f42b1b27a",
+      "
+",
+      undefined,
+      "
+",
+    ],
+    Array [
+      "sendTemplatedEmail
+",
+      "verificationEmailTemplate",
+      "
+",
+      Object {
+        "verificationId": "43663f5d-a27c-4e1f-8d22-0b0f42b1b27a",
+      },
+      "
+",
+      Array [
+        "test1@test.com",
+      ],
+      "
+",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+  ],
+}
+`;
+
+exports[`handlers emails post fails and returns error, when loadPool throws error 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "testAuth
+",
+    ],
+    Array [
+      "loadPool
+",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+  ],
+}
+`;
+
+exports[`handlers emails post fails and returns error, when sendTemplatedEmail throws error 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "testAuth
+",
+    ],
+    Array [
+      "loadPool
+",
+    ],
+    Array [
+      "updateUser
+",
+      Object {
+        "emailVerified": "false",
+      },
+      "
+",
+    ],
+    Array [
+      "updateUser - success
+",
+      "43663f5d-a27c-4e1f-8d22-0b0f42b1b27a",
+      "
+",
+      undefined,
+      "
+",
+    ],
+    Array [
+      "sendTemplatedEmail
+",
+      "verificationEmailTemplate",
+      "
+",
+      Object {
+        "verificationId": "43663f5d-a27c-4e1f-8d22-0b0f42b1b27a",
+      },
+      "
+",
+      Array [
+        "test1@test.com",
+      ],
+      "
+",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+  ],
+}
+`;
+
+exports[`handlers emails post fails and returns error, when testAuth throws error 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "testAuth
+",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+  ],
+}
+`;
+
+exports[`handlers emails post fails and returns error, when updateUser throws error 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "testAuth
+",
+    ],
+    Array [
+      "loadPool
+",
+    ],
+    Array [
+      "updateUser
+",
+      Object {
+        "emailVerified": "false",
+      },
+      "
+",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+  ],
+}
+`;

@@ -1,0 +1,169 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`handlers securities get correctly responds with a security 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "testAuth
+",
+    ],
+    Array [
+      "loadPool
+",
+    ],
+    Array [
+      "searchSecurities
+",
+      Object {
+        "search": "testSearch",
+      },
+      "
+",
+    ],
+    Array [
+      "searchSecurities - success
+",
+      Array [
+        Object {
+          "test1": "testSecurity1",
+        },
+        Object {
+          "test2": "testSecurity2",
+        },
+      ],
+      "
+",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+  ],
+}
+`;
+
+exports[`handlers securities get fails and returns error, when loadPool throws error 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "testAuth
+",
+    ],
+    Array [
+      "loadPool
+",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+  ],
+}
+`;
+
+exports[`handlers securities get fails and returns error, when missing 'search' in query 1`] = `
+Object {
+  "code": "invalid_query",
+  "message": "Please provide a 'search' key as a query string",
+}
+`;
+
+exports[`handlers securities get fails and returns error, when missing 'search' in query 2`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "testAuth
+",
+    ],
+    Array [
+      "loadPool
+",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+  ],
+}
+`;
+
+exports[`handlers securities get fails and returns error, when searchSecurities returns an error 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "testAuth
+",
+    ],
+    Array [
+      "loadPool
+",
+    ],
+    Array [
+      "searchSecurities
+",
+      Object {
+        "search": "testSearch",
+      },
+      "
+",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+  ],
+}
+`;
+
+exports[`handlers securities get fails and returns error, when testAuth throws error 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "testAuth
+",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+  ],
+}
+`;

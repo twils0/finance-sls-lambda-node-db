@@ -1,0 +1,8 @@
+include:
+  - handlers/securities/search/get/handler.js
+  - functions/aws/aws.config.json  
+  - functions/aws/getSecret.js
+  - functions/db/loadPool.js
+  - functions/db/searchSecurities.js
+  - functions/errorResponse.js
+  

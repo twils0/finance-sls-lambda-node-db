@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`functions errorResponse returns an unexpected error, when provided an object error without a 'code' key 1`] = `"[400] {\\"status\\":400,\\"body\\":{\\"error\\":{\\"code\\":\\"unexpected_error\\",\\"message\\":\\"Please contact customer service.\\"}}}"`;
+
+exports[`functions errorResponse returns an unexpected error, when provided an object error without a 'code' key 2`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "---ERR0R---
+",
+      "{\\"message\\":\\"testMessage\\"}",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+  ],
+}
+`;
+
+exports[`functions errorResponse returns callback error, when provided a string error 1`] = `"[400] {\\"status\\":400,\\"body\\":{\\"error\\":{\\"code\\":\\"unexpected_error\\",\\"message\\":\\"Please contact customer service.\\"}}}"`;
+
+exports[`functions errorResponse returns callback error, when provided a string error 2`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "---ERR0R---
+",
+      "\\"not an object\\"",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+  ],
+}
+`;
+
+exports[`functions errorResponse returns callback error, when provided an object error with a 'code' key 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "---ERR0R---
+",
+      "{\\"code\\":\\"testCode\\",\\"message\\":\\"testMessage\\"}",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+  ],
+}
+`;
