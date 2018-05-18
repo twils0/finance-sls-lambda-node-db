@@ -1,0 +1,9 @@
+{
+  "validEmails": [],
+  "validDomains": ["forward.com", "test.com"],
+  "fromName": "Example",
+  "replyToName": "Example",
+  "fromVerifiedEmail": "support@example.com",
+  "replyToVerifiedEmail": "support@example.com",
+  "subjectPrefix": "Example - "
+}

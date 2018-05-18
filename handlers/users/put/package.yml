@@ -1,0 +1,14 @@
+include:
+  - handlers/users/put/handler.js
+  - functions/aws/aws.config.json
+  - functions/aws/testAuth.js
+  - functions/aws/getSecret.js
+  - functions/aws/testUser.js
+  - functions/aws/adminUpdateUserAttributes.js
+  - functions/aws/ses/ses.config.json
+  - functions/aws/ses/sendTemplatedEmail.js
+  - functions/db/loadPool.js
+  - functions/db/updateUser.js
+  - functions/db/getUser.js
+  - functions/db/updateSecurities.js
+  - functions/errorResponse.js

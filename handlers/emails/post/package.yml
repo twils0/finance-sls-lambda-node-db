@@ -1,0 +1,10 @@
+include:
+  - handlers/emails/post/handler.js
+  - functions/aws/aws.config.json 
+  - functions/aws/testAuth.js
+  - functions/aws/getSecret.js
+  - functions/aws/ses/ses.config.json
+  - functions/aws/ses/sendTemplatedEmail.js
+  - functions/db/loadPool.js
+  - functions/db/updateUser.js  
+  - functions/errorResponse.js

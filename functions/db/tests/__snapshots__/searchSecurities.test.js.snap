@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`functions db searchSecurities correctly returns securities array 1`] = `
+"SELECT security_id, name, exchange, ticker_cusip, category
+        FROM security.security
+        WHERE security_tsv @@ to_tsquery($1::text)
+        ORDER BY ts_rank_cd(security_tsv, to_tsquery($1::text))
+        DESC LIMIT 20;"
+`;
+
+exports[`functions db searchSecurities fails and returns unexpected error, when global.pool.query throws error 1`] = `
+"SELECT security_id, name, exchange, ticker_cusip, category
+        FROM security.security
+        WHERE security_tsv @@ to_tsquery($1::text)
+        ORDER BY ts_rank_cd(security_tsv, to_tsquery($1::text))
+        DESC LIMIT 20;"
+`;

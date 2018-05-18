@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`functions db getUser correctly returns email when provided userId 1`] = `
+"SELECT email
+        FROM \\"user\\".\\"user\\"
+        WHERE user_id = $1::uuid;"
+`;
+
+exports[`functions db getUser fails and returns unexpected error, when global.pool.query throws error, when provided userId 1`] = `
+"SELECT email
+        FROM \\"user\\".\\"user\\"
+        WHERE user_id = $1::uuid;"
+`;

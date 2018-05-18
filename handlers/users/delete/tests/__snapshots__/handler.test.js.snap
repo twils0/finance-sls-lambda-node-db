@@ -1,0 +1,115 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`handlers users delete correctly deletes user 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "testAuth
+",
+    ],
+    Array [
+      "loadPool
+",
+    ],
+    Array [
+      "deleteUser
+",
+      "testUserID",
+      "
+",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+  ],
+}
+`;
+
+exports[`handlers users delete fails and returns error, when deleteUser throws error 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "testAuth
+",
+    ],
+    Array [
+      "loadPool
+",
+    ],
+    Array [
+      "deleteUser
+",
+      "testUserID",
+      "
+",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+  ],
+}
+`;
+
+exports[`handlers users delete fails and returns error, when loadPool throws error 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "testAuth
+",
+    ],
+    Array [
+      "loadPool
+",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+  ],
+}
+`;
+
+exports[`handlers users delete fails and returns error, when testAuth throws error 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "testAuth
+",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+  ],
+}
+`;

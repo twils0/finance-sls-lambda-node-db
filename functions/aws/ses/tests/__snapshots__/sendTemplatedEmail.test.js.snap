@@ -1,0 +1,110 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`functions aws ses sendTemplatedEmail correct sends emails when provided data 1`] = `[MockFunction]`;
+
+exports[`functions aws ses sendTemplatedEmail correct sends emails when provided data 2`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "unexpected error - failed to send email - toTest0@test.com",
+      "
+",
+      [Error: [2mexpect([22m[31mreceived[39m[2m).toEqual([22m[32mexpected[39m[2m)[22m
+
+Expected value to equal:
+  [32m{"Destination": {"ToAddresses": ["toTest0@test.com"]}, "ReplyToAddresses": ["Example <support@example.com>"], "Source": "Example <support@example.com>", "Template": "signalEmailTemplate", "TemplateData": ""}[39m
+Received:
+  [31m{"Destination": {"ToAddresses": ["toTest0@test.com"]}, "ReplyToAddresses": ["Example <support@example.com>"], "Source": "Example <support@example.com>", "Template": "signalEmailTemplate", "TemplateData": "{}"}[39m
+
+Difference:
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[33m@@ -7,7 +7,7 @@[39m
+[2m    "ReplyToAddresses": Array [[22m
+[2m      "Example <support@example.com>",[22m
+[2m    ],[22m
+[2m    "Source": "Example <support@example.com>",[22m
+[2m    "Template": "signalEmailTemplate",[22m
+[32m-   "TemplateData": "",[39m
+[31m+   "TemplateData": "{}",[39m
+[2m  }[22m],
+    ],
+    Array [
+      "unexpected error - failed to send email - toTest1@test.com",
+      "
+",
+      [Error: [2mexpect([22m[31mreceived[39m[2m).toEqual([22m[32mexpected[39m[2m)[22m
+
+Expected value to equal:
+  [32m{"Destination": {"ToAddresses": ["toTest1@test.com"]}, "ReplyToAddresses": ["Example <support@example.com>"], "Source": "Example <support@example.com>", "Template": "signalEmailTemplate", "TemplateData": ""}[39m
+Received:
+  [31m{"Destination": {"ToAddresses": ["toTest1@test.com"]}, "ReplyToAddresses": ["Example <support@example.com>"], "Source": "Example <support@example.com>", "Template": "signalEmailTemplate", "TemplateData": "{}"}[39m
+
+Difference:
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[33m@@ -7,7 +7,7 @@[39m
+[2m    "ReplyToAddresses": Array [[22m
+[2m      "Example <support@example.com>",[22m
+[2m    ],[22m
+[2m    "Source": "Example <support@example.com>",[22m
+[2m    "Template": "signalEmailTemplate",[22m
+[32m-   "TemplateData": "",[39m
+[31m+   "TemplateData": "{}",[39m
+[2m  }[22m],
+    ],
+  ],
+  "results": Array [
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+  ],
+}
+`;
+
+exports[`functions aws ses sendTemplatedEmail fails and console logs email not sent, no email addresses, error 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "email not sent - no email addresses provided",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+  ],
+}
+`;
+
+exports[`functions aws ses sendTemplatedEmail fails and console logs failed to send error, when sendTemplatedEmail throws error 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "unexpected error - failed to send email - toTest0@test.com",
+      "
+",
+      Object {
+        "code": "testCode",
+        "message": "testMessage",
+      },
+    ],
+  ],
+  "results": Array [
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+  ],
+}
+`;

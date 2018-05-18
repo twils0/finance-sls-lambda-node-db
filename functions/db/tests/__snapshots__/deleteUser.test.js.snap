@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`functions db deleteUser correctly returns user id 1`] = `
+"DELETE FROM \\"user\\".\\"join_user_security\\"
+          WHERE user_id = $1::uuid;"
+`;
+
+exports[`functions db deleteUser correctly returns user id 2`] = `
+"DELETE FROM \\"user\\".\\"user\\"
+        WHERE user_id = $1::uuid;"
+`;
+
+exports[`functions db deleteUser fails and returns unexpected error, when global.pool.query throws error on first query 1`] = `
+"DELETE FROM \\"user\\".\\"join_user_security\\"
+          WHERE user_id = $1::uuid;"
+`;
+
+exports[`functions db deleteUser fails and returns unexpected error, when global.pool.query throws error on second query 1`] = `
+"DELETE FROM \\"user\\".\\"join_user_security\\"
+          WHERE user_id = $1::uuid;"
+`;
+
+exports[`functions db deleteUser fails and returns unexpected error, when global.pool.query throws error on second query 2`] = `
+"DELETE FROM \\"user\\".\\"user\\"
+        WHERE user_id = $1::uuid;"
+`;

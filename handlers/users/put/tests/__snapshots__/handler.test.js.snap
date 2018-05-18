@@ -1,0 +1,1028 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`handlers users put correctly updates subscription securities, with email and emailAdditional in body 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "testAuth
+",
+    ],
+    Array [
+      "loadPool
+",
+    ],
+    Array [
+      "testUser
+",
+      "test1@test.com",
+      "
+",
+    ],
+    Array [
+      "updateUser
+",
+      Object {
+        "email": "test1@test.com",
+        "emailAdditional": "test2@test.com",
+      },
+      "
+",
+    ],
+    Array [
+      "updateUser - success
+",
+      "test1@test.com",
+      "
+",
+    ],
+    Array [
+      "adminUpdateUserAttributes
+",
+      "test1@test.com",
+      "
+",
+      Object {
+        "email": "test1@test.com",
+        "emailAdditional": "test2@test.com",
+      },
+      "
+",
+    ],
+    Array [
+      "updateUser
+",
+      Object {
+        "emailAdditionalVerified": "false",
+        "emailVerified": "false",
+      },
+      "
+",
+    ],
+    Array [
+      "updateUser - success
+",
+      "43663f5d-a27c-4e1f-8d22-0b0f42b1b27a",
+      "
+",
+      "7cfcfcc9-0e50-4a0b-90a7-d340a2e51960",
+      "
+",
+    ],
+    Array [
+      "sendTemplatedEmail
+",
+      "verificationEmailTemplate",
+      "
+",
+      Object {
+        "verificationId": "43663f5d-a27c-4e1f-8d22-0b0f42b1b27a",
+      },
+      "
+",
+      Array [
+        "test1@test.com",
+      ],
+      "
+",
+    ],
+    Array [
+      "sendTemplatedEmail
+",
+      "verificationEmailTemplate",
+      "
+",
+      Object {
+        "verificationId": "7cfcfcc9-0e50-4a0b-90a7-d340a2e51960",
+      },
+      "
+",
+      Array [
+        "test2@test.com",
+      ],
+      "
+",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+  ],
+}
+`;
+
+exports[`handlers users put correctly updates subscription securities, with email in body 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "testAuth
+",
+    ],
+    Array [
+      "loadPool
+",
+    ],
+    Array [
+      "testUser
+",
+      "test1@test.com",
+      "
+",
+    ],
+    Array [
+      "updateUser
+",
+      Object {
+        "current": "testId1",
+        "email": "test1@test.com",
+        "list": Array [
+          "testId1",
+          "testId2",
+        ],
+      },
+      "
+",
+    ],
+    Array [
+      "updateUser - success
+",
+      "test1@test.com",
+      "
+",
+    ],
+    Array [
+      "adminUpdateUserAttributes
+",
+      "test1@test.com",
+      "
+",
+      Object {
+        "current": "testId1",
+        "email": "test1@test.com",
+        "list": Array [
+          "testId1",
+          "testId2",
+        ],
+      },
+      "
+",
+    ],
+    Array [
+      "updateSecurities
+",
+      Object {
+        "current": "testId1",
+        "email": "test1@test.com",
+        "list": Array [
+          "testId1",
+          "testId2",
+        ],
+      },
+      "
+",
+    ],
+    Array [
+      "updateUser
+",
+      Object {
+        "emailVerified": "false",
+      },
+      "
+",
+    ],
+    Array [
+      "updateUser - success
+",
+      "43663f5d-a27c-4e1f-8d22-0b0f42b1b27a",
+      "
+",
+      undefined,
+      "
+",
+    ],
+    Array [
+      "sendTemplatedEmail
+",
+      "verificationEmailTemplate",
+      "
+",
+      Object {
+        "verificationId": "43663f5d-a27c-4e1f-8d22-0b0f42b1b27a",
+      },
+      "
+",
+      Array [
+        "test1@test.com",
+      ],
+      "
+",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+  ],
+}
+`;
+
+exports[`handlers users put correctly updates subscription securities, with emailAdditional in body 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "testAuth
+",
+    ],
+    Array [
+      "loadPool
+",
+    ],
+    Array [
+      "updateUser
+",
+      Object {
+        "emailAdditional": "test2@test.com",
+      },
+      "
+",
+    ],
+    Array [
+      "updateUser - success
+",
+      "test1@test.com",
+      "
+",
+    ],
+    Array [
+      "adminUpdateUserAttributes
+",
+      "test1@test.com",
+      "
+",
+      Object {
+        "emailAdditional": "test2@test.com",
+      },
+      "
+",
+    ],
+    Array [
+      "updateUser
+",
+      Object {
+        "emailAdditionalVerified": "false",
+      },
+      "
+",
+    ],
+    Array [
+      "updateUser - success
+",
+      undefined,
+      "
+",
+      "7cfcfcc9-0e50-4a0b-90a7-d340a2e51960",
+      "
+",
+    ],
+    Array [
+      "sendTemplatedEmail
+",
+      "verificationEmailTemplate",
+      "
+",
+      Object {
+        "verificationId": "7cfcfcc9-0e50-4a0b-90a7-d340a2e51960",
+      },
+      "
+",
+      Array [
+        "test2@test.com",
+      ],
+      "
+",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+  ],
+}
+`;
+
+exports[`handlers users put correctly updates subscription securities, without email or emailAdditional in body 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "testAuth
+",
+    ],
+    Array [
+      "loadPool
+",
+    ],
+    Array [
+      "updateSecurities
+",
+      Object {
+        "current": "testId1",
+        "list": Array [
+          "testId1",
+          "testId2",
+        ],
+      },
+      "
+",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+  ],
+}
+`;
+
+exports[`handlers users put fails and returns error, when adminUpdateUserAttributes throws error 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "testAuth
+",
+    ],
+    Array [
+      "loadPool
+",
+    ],
+    Array [
+      "updateUser
+",
+      Object {
+        "emailAdditional": "test2@test.com",
+      },
+      "
+",
+    ],
+    Array [
+      "updateUser - success
+",
+      "test1@test.com",
+      "
+",
+    ],
+    Array [
+      "adminUpdateUserAttributes
+",
+      "test1@test.com",
+      "
+",
+      Object {
+        "emailAdditional": "test2@test.com",
+      },
+      "
+",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+  ],
+}
+`;
+
+exports[`handlers users put fails and returns error, when loadPool throws error 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "testAuth
+",
+    ],
+    Array [
+      "loadPool
+",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+  ],
+}
+`;
+
+exports[`handlers users put fails and returns error, when missing 'current' key in event body 1`] = `
+Object {
+  "code": "invalid_body",
+  "message": "Please provide a 'current' key in the body of your request.",
+}
+`;
+
+exports[`handlers users put fails and returns error, when missing 'current' key in event body 2`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "testAuth
+",
+    ],
+    Array [
+      "loadPool
+",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+  ],
+}
+`;
+
+exports[`handlers users put fails and returns error, when missing 'list' key in event body 1`] = `
+Object {
+  "code": "invalid_body",
+  "message": "Please provide a 'list' key in the body of your request.",
+}
+`;
+
+exports[`handlers users put fails and returns error, when missing 'list' key in event body 2`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "testAuth
+",
+    ],
+    Array [
+      "loadPool
+",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+  ],
+}
+`;
+
+exports[`handlers users put fails and returns error, when sendTemplatedEmail throws error 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "testAuth
+",
+    ],
+    Array [
+      "loadPool
+",
+    ],
+    Array [
+      "testUser
+",
+      "test1@test.com",
+      "
+",
+    ],
+    Array [
+      "updateUser
+",
+      Object {
+        "current": "testId1",
+        "email": "test1@test.com",
+        "list": Array [
+          "testId1",
+          "testId2",
+        ],
+      },
+      "
+",
+    ],
+    Array [
+      "updateUser - success
+",
+      "test1@test.com",
+      "
+",
+    ],
+    Array [
+      "adminUpdateUserAttributes
+",
+      "test1@test.com",
+      "
+",
+      Object {
+        "current": "testId1",
+        "email": "test1@test.com",
+        "list": Array [
+          "testId1",
+          "testId2",
+        ],
+      },
+      "
+",
+    ],
+    Array [
+      "updateSecurities
+",
+      Object {
+        "current": "testId1",
+        "email": "test1@test.com",
+        "list": Array [
+          "testId1",
+          "testId2",
+        ],
+      },
+      "
+",
+    ],
+    Array [
+      "updateUser
+",
+      Object {
+        "emailVerified": "false",
+      },
+      "
+",
+    ],
+    Array [
+      "updateUser - success
+",
+      "43663f5d-a27c-4e1f-8d22-0b0f42b1b27a",
+      "
+",
+      undefined,
+      "
+",
+    ],
+    Array [
+      "sendTemplatedEmail
+",
+      "verificationEmailTemplate",
+      "
+",
+      Object {
+        "verificationId": "43663f5d-a27c-4e1f-8d22-0b0f42b1b27a",
+      },
+      "
+",
+      Array [
+        "test1@test.com",
+      ],
+      "
+",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+  ],
+}
+`;
+
+exports[`handlers users put fails and returns error, when testAuth throws error 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "testAuth
+",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+  ],
+}
+`;
+
+exports[`handlers users put fails and returns error, when testUser throws error 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "testAuth
+",
+    ],
+    Array [
+      "loadPool
+",
+    ],
+    Array [
+      "testUser
+",
+      "test1@test.com",
+      "
+",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+  ],
+}
+`;
+
+exports[`handlers users put fails and returns error, when the first updateUser throws error 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "testAuth
+",
+    ],
+    Array [
+      "loadPool
+",
+    ],
+    Array [
+      "testUser
+",
+      "test1@test.com",
+      "
+",
+    ],
+    Array [
+      "updateUser
+",
+      Object {
+        "current": "testId1",
+        "email": "test1@test.com",
+        "list": Array [
+          "testId1",
+          "testId2",
+        ],
+      },
+      "
+",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+  ],
+}
+`;
+
+exports[`handlers users put fails and returns error, when the second updateUser throws error 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "testAuth
+",
+    ],
+    Array [
+      "loadPool
+",
+    ],
+    Array [
+      "testUser
+",
+      "test1@test.com",
+      "
+",
+    ],
+    Array [
+      "updateUser
+",
+      Object {
+        "current": "testId1",
+        "email": "test1@test.com",
+        "list": Array [
+          "testId1",
+          "testId2",
+        ],
+      },
+      "
+",
+    ],
+    Array [
+      "updateUser - success
+",
+      "test1@test.com",
+      "
+",
+    ],
+    Array [
+      "adminUpdateUserAttributes
+",
+      "test1@test.com",
+      "
+",
+      Object {
+        "current": "testId1",
+        "email": "test1@test.com",
+        "list": Array [
+          "testId1",
+          "testId2",
+        ],
+      },
+      "
+",
+    ],
+    Array [
+      "updateSecurities
+",
+      Object {
+        "current": "testId1",
+        "email": "test1@test.com",
+        "list": Array [
+          "testId1",
+          "testId2",
+        ],
+      },
+      "
+",
+    ],
+    Array [
+      "updateUser
+",
+      Object {
+        "emailVerified": "false",
+      },
+      "
+",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+  ],
+}
+`;
+
+exports[`handlers users put fails and returns error, when updateSecurities returns an error 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "testAuth
+",
+    ],
+    Array [
+      "loadPool
+",
+    ],
+    Array [
+      "updateSecurities
+",
+      Object {
+        "current": "testId1",
+        "list": Array [
+          "testId1",
+          "testId2",
+        ],
+      },
+      "
+",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+  ],
+}
+`;

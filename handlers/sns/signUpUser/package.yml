@@ -1,0 +1,11 @@
+include:
+  - handlers/sns/snsTestEmails.config.json
+  - handlers/sns/signUpUser/handler.js
+  - functions/aws/aws.config.json  
+  - functions/aws/getSecret.js
+  - functions/aws/sns/parseSNS.js
+  - functions/aws/signUp.js
+  - functions/db/loadPool.js
+  - functions/db/addUser.js
+  - functions/errorResponse.js
+  
