@@ -1,0 +1,346 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`handlers sns forwardEmails correctly sends emails 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "loadPool
+",
+    ],
+    Array [
+      "parseS3SNSEvent
+",
+    ],
+    Array [
+      "parseEmailBody
+",
+    ],
+    Array [
+      "getEmailAddresses
+",
+      "testTickerCusip",
+      "
+",
+    ],
+    Array [
+      "Email Received",
+      "
+From Email: ",
+      "test@test.com",
+      "
+From Domain: ",
+      "test.com",
+      "
+Ticker/Cusip: ",
+      "testTickerCusip",
+      "
+Email Addresses: ",
+      Array [
+        "toTest0@test.com",
+        "toTest1@test.com",
+      ],
+    ],
+  ],
+  "results": Array [
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+  ],
+}
+`;
+
+exports[`handlers sns forwardEmails fails and returns error, when fromDomain is invalid 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "unexpected error - missing or invalid fromEmail and/or fromDomain",
+      Object {
+        "body": Object {
+          "message": "success",
+        },
+        "status": 200,
+      },
+    ],
+  ],
+  "results": Array [
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+  ],
+}
+`;
+
+exports[`handlers sns forwardEmails fails and returns error, when fromDomain is invalid 2`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "loadPool
+",
+    ],
+    Array [
+      "parseS3SNSEvent
+",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+  ],
+}
+`;
+
+exports[`handlers sns forwardEmails fails and returns error, when fromEmail is missing 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "unexpected error - missing or invalid fromEmail and/or fromDomain",
+      Object {
+        "body": Object {
+          "message": "success",
+        },
+        "status": 200,
+      },
+    ],
+  ],
+  "results": Array [
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+  ],
+}
+`;
+
+exports[`handlers sns forwardEmails fails and returns error, when fromEmail is missing 2`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "loadPool
+",
+    ],
+    Array [
+      "parseS3SNSEvent
+",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+  ],
+}
+`;
+
+exports[`handlers sns forwardEmails fails and returns error, when getEmailAddresses throws error 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "loadPool
+",
+    ],
+    Array [
+      "parseS3SNSEvent
+",
+    ],
+    Array [
+      "parseEmailBody
+",
+    ],
+    Array [
+      "getEmailAddresses
+",
+      "testTickerCusip",
+      "
+",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+  ],
+}
+`;
+
+exports[`handlers sns forwardEmails fails and returns error, when loadPool throws error 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "loadPool
+",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+  ],
+}
+`;
+
+exports[`handlers sns forwardEmails fails and returns error, when parseEmailBody throws error 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "loadPool
+",
+    ],
+    Array [
+      "parseS3SNSEvent
+",
+    ],
+    Array [
+      "parseEmailBody
+",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+  ],
+}
+`;
+
+exports[`handlers sns forwardEmails fails and returns error, when parseS3SNSEvent throws error 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "loadPool
+",
+    ],
+    Array [
+      "parseS3SNSEvent
+",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+  ],
+}
+`;
+
+exports[`handlers sns forwardEmails fails and returns error, when sendEmail throws error 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "loadPool
+",
+    ],
+    Array [
+      "parseS3SNSEvent
+",
+    ],
+    Array [
+      "parseEmailBody
+",
+    ],
+    Array [
+      "getEmailAddresses
+",
+      "testTickerCusip",
+      "
+",
+    ],
+    Array [
+      "Email Received",
+      "
+From Email: ",
+      "test@test.com",
+      "
+From Domain: ",
+      "test.com",
+      "
+Ticker/Cusip: ",
+      "testTickerCusip",
+      "
+Email Addresses: ",
+      Array [
+        "toTest0@test.com",
+        "toTest1@test.com",
+      ],
+    ],
+  ],
+  "results": Array [
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+  ],
+}
+`;

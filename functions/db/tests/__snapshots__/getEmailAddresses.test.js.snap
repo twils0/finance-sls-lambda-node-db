@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`functions db getEmailAddresses correctly returns email addresses 1`] = `
+"SELECT security_id
+      FROM security.security
+      WHERE ticker_cusip = $1::text"
+`;
+
+exports[`functions db getEmailAddresses correctly returns email addresses 2`] = `
+"SELECT email, email_additional
+        FROM \\"user\\".\\"user\\"
+        WHERE user_id in (
+        SELECT user_id
+        FROM \\"user\\".join_user_security
+        WHERE security_id = $1::uuid);"
+`;
+
+exports[`functions db getEmailAddresses fails and returns unexpected error, when global.pool.query throws error first query 1`] = `
+"SELECT security_id
+      FROM security.security
+      WHERE ticker_cusip = $1::text"
+`;
+
+exports[`functions db getEmailAddresses fails and returns unexpected error, when global.pool.query throws error second query 1`] = `
+"SELECT security_id
+      FROM security.security
+      WHERE ticker_cusip = $1::text"
+`;
+
+exports[`functions db getEmailAddresses fails and returns unexpected error, when global.pool.query throws error second query 2`] = `
+"SELECT email, email_additional
+        FROM \\"user\\".\\"user\\"
+        WHERE user_id in (
+        SELECT user_id
+        FROM \\"user\\".join_user_security
+        WHERE security_id = $1::uuid);"
+`;
+
+exports[`functions db getEmailAddresses fails and returns unexpected error, when security table query is empty 1`] = `
+"SELECT security_id
+      FROM security.security
+      WHERE ticker_cusip = $1::text"
+`;
+
+exports[`functions db getEmailAddresses fails and returns unexpected error, when security table query is empty 2`] = `"unexpected error - ticker not found"`;
+
+exports[`functions db getEmailAddresses returns an empty array, when join table query is empty 1`] = `
+"SELECT security_id
+      FROM security.security
+      WHERE ticker_cusip = $1::text"
+`;
+
+exports[`functions db getEmailAddresses returns an empty array, when join table query is empty 2`] = `
+"SELECT email, email_additional
+        FROM \\"user\\".\\"user\\"
+        WHERE user_id in (
+        SELECT user_id
+        FROM \\"user\\".join_user_security
+        WHERE security_id = $1::uuid);"
+`;

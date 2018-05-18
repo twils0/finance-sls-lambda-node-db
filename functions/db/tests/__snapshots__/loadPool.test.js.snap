@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`functions db loadPool correctly loads db 1`] = `[MockFunction]`;
+
+exports[`functions db loadPool fails and returns unexpected error, when getSecret does not return a value 1`] = `"unexpected error - unable to access db credentials from getSecret"`;
+
+exports[`functions db loadPool fails and returns unexpected error, when pool throws error 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "unexpected error - most likely idle client; function will end
+",
+      Object {
+        "code": "testCode",
+        "message": "testMessage",
+      },
+    ],
+    Array [
+      "DB Loaded
+",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+  ],
+}
+`;

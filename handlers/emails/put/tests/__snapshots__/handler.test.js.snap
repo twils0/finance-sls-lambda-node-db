@@ -1,0 +1,291 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`handlers emails put correctly sendsTemplated email or emails, with email additional verified 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "loadPool
+",
+    ],
+    Array [
+      "updateUser
+",
+      "43663f5d-a27c-4e1f-8d22-0b0f42b1b27a",
+      "
+",
+    ],
+    Array [
+      "updateUser - success
+",
+      "test1@test.com",
+      "
+",
+      "7cfcfcc9-0e50-4a0b-90a7-d340a2e51960",
+      "
+",
+      null,
+      "
+",
+    ],
+    Array [
+      "adminUpdateUserAttributes
+",
+      "test1@test.com",
+      "
+",
+      Object {
+        "emailAdditionalVerified": true,
+      },
+      "
+",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+  ],
+}
+`;
+
+exports[`handlers emails put correctly sendsTemplated email or emails, with email and email additional verified 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "loadPool
+",
+    ],
+    Array [
+      "updateUser
+",
+      "43663f5d-a27c-4e1f-8d22-0b0f42b1b27a",
+      "
+",
+    ],
+    Array [
+      "updateUser - success
+",
+      "test1@test.com",
+      "
+",
+      null,
+      "
+",
+      null,
+      "
+",
+    ],
+    Array [
+      "adminUpdateUserAttributes
+",
+      "test1@test.com",
+      "
+",
+      Object {
+        "emailAdditionalVerified": true,
+        "emailVerified": true,
+      },
+      "
+",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+  ],
+}
+`;
+
+exports[`handlers emails put correctly sendsTemplated email or emails, with email verified 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "loadPool
+",
+    ],
+    Array [
+      "updateUser
+",
+      "43663f5d-a27c-4e1f-8d22-0b0f42b1b27a",
+      "
+",
+    ],
+    Array [
+      "updateUser - success
+",
+      "test1@test.com",
+      "
+",
+      null,
+      "
+",
+      "a14dfb83-c3c5-4854-8e53-b6dd0e36205f",
+      "
+",
+    ],
+    Array [
+      "adminUpdateUserAttributes
+",
+      "test1@test.com",
+      "
+",
+      Object {
+        "emailVerified": true,
+      },
+      "
+",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+  ],
+}
+`;
+
+exports[`handlers emails put fails and returns error, when adminUpdateUserAttributes throws error 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "loadPool
+",
+    ],
+    Array [
+      "updateUser
+",
+      "43663f5d-a27c-4e1f-8d22-0b0f42b1b27a",
+      "
+",
+    ],
+    Array [
+      "updateUser - success
+",
+      "test1@test.com",
+      "
+",
+      null,
+      "
+",
+      "a14dfb83-c3c5-4854-8e53-b6dd0e36205f",
+      "
+",
+    ],
+    Array [
+      "adminUpdateUserAttributes
+",
+      "test1@test.com",
+      "
+",
+      Object {
+        "emailVerified": true,
+      },
+      "
+",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+  ],
+}
+`;
+
+exports[`handlers emails put fails and returns error, when loadPool throws error 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "loadPool
+",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+  ],
+}
+`;
+
+exports[`handlers emails put fails and returns error, when updateUser throws error 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "loadPool
+",
+    ],
+    Array [
+      "updateUser
+",
+      "43663f5d-a27c-4e1f-8d22-0b0f42b1b27a",
+      "
+",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+  ],
+}
+`;

@@ -1,0 +1,141 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`handlers users get correctly responds with subscription securities 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "testAuth
+",
+    ],
+    Array [
+      "loadPool
+",
+    ],
+    Array [
+      "getSecurities
+",
+      "testUserID",
+      "
+",
+    ],
+    Array [
+      "getSecurities - success
+",
+      Object {
+        "testId1": Object {
+          "category": "testCategory1",
+          "exchange": "testExchange1",
+          "id": "testId1",
+          "name": "testName1",
+          "tickerCusip": "testTicker1",
+        },
+        "testId2": Object {
+          "category": "testCategory2",
+          "exchange": "testExchange2",
+          "id": "testId2",
+          "name": "testName2",
+          "tickerCusip": "testTicker2",
+        },
+      },
+      "
+",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+  ],
+}
+`;
+
+exports[`handlers users get fails and returns error, when getSecurities returns an error 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "testAuth
+",
+    ],
+    Array [
+      "loadPool
+",
+    ],
+    Array [
+      "getSecurities
+",
+      "testUserID",
+      "
+",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+  ],
+}
+`;
+
+exports[`handlers users get fails and returns error, when loadPool throws error 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "testAuth
+",
+    ],
+    Array [
+      "loadPool
+",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+  ],
+}
+`;
+
+exports[`handlers users get fails and returns error, when testAuth throws error 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "testAuth
+",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+  ],
+}
+`;

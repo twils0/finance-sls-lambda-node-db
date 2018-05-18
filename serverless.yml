@@ -1,0 +1,275 @@
+service: finance-sls-lambda-node-db
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  profile: serverless-admin
+  region: us-east-1
+  memorySize: 128
+  timeout: 15
+  role: slsLambdaDbRole
+  vpc:
+    securityGroupIds:
+      - sg-f0d0deb9
+    subnetIds:
+      - subnet-...
+      - subnet-...
+  stage: prod
+
+plugins:
+  - serverless-domain-manager
+
+custom:
+  customDomain:
+    domainName: 'api.example.com'
+    stage: 'prod'
+    createRoute53Record: true
+  paths:
+    securities: '/securities'
+    securitiesSearch: '/securities/search'
+    users: '/users'
+    emails: '/emails'
+  cors:
+    origin: '*'
+  arns:
+    cognito: arn:aws:cognito-idp:us-east-1:...
+
+package:
+  individually: true
+  exclude:
+    - functions/**
+    - handlers/**
+    - package-lock.json
+    - package.json
+
+functions:
+  getSecurities:
+    handler: handlers/securities/get/handler.get
+    package: ${file(./handlers/securities/get/package.yml)}
+    events:
+      - http:
+          path: ${self:custom.paths.securities}
+          method: get
+          cors: ${self:custom.cors}
+          integration: lambda
+          authorizer:
+            arn: ${self:custom.arns.cognito}
+            claims:
+              - custom:user_id
+
+  getSecuritiesSearch:
+    handler: handlers/securities/search/get/handler.get
+    package: ${file(./handlers/securities/search/get/package.yml)}
+    events:
+      - http:
+          path: ${self:custom.paths.securitiesSearch}
+          method: get
+          cors: ${self:custom.cors}
+          integration: lambda
+
+  forwardEmails:
+    handler: handlers/sns/forwardEmails/handler.forwardEmails
+    package: ${file(./handlers/sns/forwardEmails/package.yml)}
+    role: slsLambdaDbSnsS3SesRole
+    events:
+      - sns: arn:aws:sns:us-east-1:...:finance_sns_ses
+
+  signUpUser:
+    handler: handlers/sns/signUpUser/handler.signUpUser
+    package: ${file(./handlers/sns/signUpUser/package.yml)}
+    role: slsLambdaDbSnsCognitoRole
+    events:
+      - sns: arn:aws:sns:us-east-1:...:finance_sns_stripe
+
+  putUsers:
+    handler: handlers/users/put/handler.put
+    package: ${file(./handlers/users/put/package.yml)}
+    role: slsLambdaDbCognitoSesRole
+    events:
+      - http:
+          path: ${self:custom.paths.users}
+          method: put
+          cors: ${self:custom.cors}
+          integration: lambda
+          authorizer:
+            arn: ${self:custom.arns.cognito}
+            claims:
+              - custom:user_id
+
+  getUsers:
+    handler: handlers/users/get/handler.get
+    package: ${file(./handlers/users/get/package.yml)}
+    events:
+      - http:
+          path: ${self:custom.paths.users}
+          method: get
+          cors: ${self:custom.cors}
+          integration: lambda
+          authorizer:
+            arn: ${self:custom.arns.cognito}
+            claims:
+              - custom:user_id
+
+  deleteUsers:
+    handler: handlers/users/delete/handler.delete
+    package: ${file(./handlers/users/delete/package.yml)}
+    events:
+      - http:
+          path: ${self:custom.paths.users}
+          method: delete
+          cors: ${self:custom.cors}
+          integration: lambda
+          authorizer:
+            arn: ${self:custom.arns.cognito}
+            claims:
+              - custom:user_id
+
+  postEmails:
+    handler: handlers/emails/post/handler.post
+    package: ${file(./handlers/emails/post/package.yml)}
+    role: slsLambdaDbCognitoSesRole
+    events:
+      - http:
+          path: ${self:custom.paths.emails}
+          method: post
+          cors: ${self:custom.cors}
+          integration: lambda
+          authorizer:
+            arn: ${self:custom.arns.cognito}
+            claims:
+              - custom:user_id
+              - email
+              - custom:email_ver
+              - custom:email_additional
+              - custom:email_additional_ver
+
+  putEmails:
+    handler: handlers/emails/put/handler.put
+    package: ${file(./handlers/emails/put/package.yml)}
+    role: slsLambdaDbCognitoRole
+    events:
+      - http:
+          path: ${self:custom.paths.emails}
+          method: put
+          cors: ${self:custom.cors}
+          integration: lambda
+
+resources:
+  Resources:
+    slsLambdaDbRole:
+      Type: AWS::IAM::Role
+      Properties:
+        RoleName: slsLambdaDbRole
+        AssumeRolePolicyDocument:
+          Version: '2012-10-17'
+          Statement:
+            - Effect: Allow
+              Action:
+                - sts:AssumeRole
+              Principal:
+                Service:
+                  - lambda.amazonaws.com
+        ManagedPolicyArns:
+          - arn:aws:iam::aws:policy/service-role/AWSLambdaVPCAccessExecutionRole
+          - arn:aws:iam::...:policy/finance_cloudwatch_logs
+          - arn:aws:iam::...:policy/finance_secrets_manager_sls
+
+    slsLambdaDbApiSesRole:
+      Type: AWS::IAM::Role
+      Properties:
+        RoleName: slsLambdaDbApiSesRole
+        AssumeRolePolicyDocument:
+          Version: '2012-10-17'
+          Statement:
+            - Effect: Allow
+              Action:
+                - sts:AssumeRole
+              Principal:
+                Service:
+                  - lambda.amazonaws.com
+        ManagedPolicyArns:
+          - arn:aws:iam::aws:policy/service-role/AWSLambdaVPCAccessExecutionRole
+          - arn:aws:iam::...:policy/finance_cloudwatch_logs
+          - arn:aws:iam::...:policy/finance_secrets_manager_sls
+          - arn:aws:iam::...:policy/finance_secrets_manager_api
+          - arn:aws:iam::...:policy/finance_ses_send_email
+
+    slsLambdaDbCognitoRole:
+      Type: AWS::IAM::Role
+      Properties:
+        RoleName: slsLambdaDbCognitoRole
+        AssumeRolePolicyDocument:
+          Version: '2012-10-17'
+          Statement:
+            - Effect: Allow
+              Action:
+                - sts:AssumeRole
+              Principal:
+                Service:
+                  - lambda.amazonaws.com
+        ManagedPolicyArns:
+          - arn:aws:iam::aws:policy/service-role/AWSLambdaVPCAccessExecutionRole
+          - arn:aws:iam::...:policy/finance_cloudwatch_logs
+          - arn:aws:iam::...:policy/finance_secrets_manager_sls
+          - arn:aws:iam::...:policy/finance_cognito
+
+    slsLambdaDbSnsCognitoRole:
+      Type: AWS::IAM::Role
+      Properties:
+        RoleName: slsLambdaDbSnsCognitoRole
+        AssumeRolePolicyDocument:
+          Version: '2012-10-17'
+          Statement:
+            - Effect: Allow
+              Action:
+                - sts:AssumeRole
+              Principal:
+                Service:
+                  - lambda.amazonaws.com
+        ManagedPolicyArns:
+          - arn:aws:iam::aws:policy/service-role/AWSLambdaVPCAccessExecutionRole
+          - arn:aws:iam::...:policy/finance_cloudwatch_logs
+          - arn:aws:iam::...:policy/finance_secrets_manager_sls
+          - arn:aws:iam::...:policy/finance_sns_stripe
+          - arn:aws:iam::...:policy/finance_cognito
+
+    slsLambdaDbSnsS3SesRole:
+      Type: AWS::IAM::Role
+      Properties:
+        RoleName: slsLambdaDbSnsS3SesRole
+        AssumeRolePolicyDocument:
+          Version: '2012-10-17'
+          Statement:
+            - Effect: Allow
+              Action:
+                - sts:AssumeRole
+              Principal:
+                Service:
+                  - lambda.amazonaws.com
+        ManagedPolicyArns:
+          - arn:aws:iam::aws:policy/service-role/AWSLambdaVPCAccessExecutionRole
+          - arn:aws:iam::...:policy/finance_cloudwatch_logs
+          - arn:aws:iam::...:policy/finance_secrets_manager_sls
+          - arn:aws:iam::...:policy/finance_sns_ses
+          - arn:aws:iam::...:policy/finance_s3_ses
+          - arn:aws:iam::...:policy/finance_ses_send_email
+
+    slsLambdaDbCognitoSesRole:
+      Type: AWS::IAM::Role
+      Properties:
+        RoleName: slsLambdaDbCognitoSesRole
+        AssumeRolePolicyDocument:
+          Version: '2012-10-17'
+          Statement:
+            - Effect: Allow
+              Action:
+                - sts:AssumeRole
+              Principal:
+                Service:
+                  - lambda.amazonaws.com
+        ManagedPolicyArns:
+          - arn:aws:iam::aws:policy/service-role/AWSLambdaVPCAccessExecutionRole
+          - arn:aws:iam::...:policy/finance_cloudwatch_logs
+          - arn:aws:iam::...:policy/finance_secrets_manager_sls
+          - arn:aws:iam::...:policy/finance_ses_send_email
+          - arn:aws:iam::...:policy/finance_cognito

@@ -1,0 +1,9 @@
+include:
+  - handlers/users/get/handler.js
+  - functions/aws/aws.config.json
+  - functions/aws/testAuth.js
+  - functions/aws/getSecret.js
+  - functions/db/loadPool.js
+  - functions/db/getSecurities.js
+  - functions/errorResponse.js
+  

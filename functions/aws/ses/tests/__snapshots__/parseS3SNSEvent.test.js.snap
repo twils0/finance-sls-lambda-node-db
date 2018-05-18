@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`functions aws ses parseS3SNSEvent fails and returns unexpected error, unable to find bucketName 1`] = `"unexpected error - unable to find bucketName in receipt.action"`;
+
+exports[`functions aws ses parseS3SNSEvent fails and returns unexpected error, unable to find from 1`] = `"unexpected error - unable to find from in mail.commonHeaders"`;
+
+exports[`functions aws ses parseS3SNSEvent fails and returns unexpected error, unable to find objectKey 1`] = `"unexpected error - unable to find objectKey in receipt.action"`;
+
+exports[`functions aws ses parseS3SNSEvent fails and returns unexpected error, unable to parse from domain 1`] = `"unexpected error - unable to parse fromDomain"`;
+
+exports[`functions aws ses parseS3SNSEvent fails and returns unexpected error, unable to parse from email 1`] = `"unexpected error - unable to parse fromEmail"`;

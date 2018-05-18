@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`functions db addUser correctly adds email and returns userId, when provided email 1`] = `
+"INSERT INTO \\"user\\".\\"user\\" (email, email_additional)
+      VALUES($1::text, $2::text) RETURNING user_id;"
+`;
+
+exports[`functions db addUser correctly adds email, emailAdditional, and returns userId, when provided email and emailAdditional 1`] = `
+"INSERT INTO \\"user\\".\\"user\\" (email, email_additional)
+      VALUES($1::text, $2::text) RETURNING user_id;"
+`;
+
+exports[`functions db addUser fails and returns unexpected error, when global.pool.query throws error, when provided email 1`] = `
+"INSERT INTO \\"user\\".\\"user\\" (email, email_additional)
+      VALUES($1::text, $2::text) RETURNING user_id;"
+`;

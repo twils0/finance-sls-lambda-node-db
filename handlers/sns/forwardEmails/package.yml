@@ -1,0 +1,13 @@
+include:
+  - handlers/sns/snsTestEmails.config.json
+  - handlers/sns/forwardEmails/handler.js
+  - functions/aws/aws.config.json
+  - functions/aws/getSecret.js
+  - functions/aws/ses/ses.config.json
+  - functions/aws/ses/parseS3SNSEvent.js
+  - functions/aws/ses/parseEmailBody.js
+  - functions/aws/ses/sendEmail.js
+  - functions/aws/ses/sendTemplatedEmail.js
+  - functions/db/loadPool.js
+  - functions/db/getEmailAddresses.js
+  - functions/errorResponse.js
