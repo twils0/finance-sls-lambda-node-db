@@ -1,6 +1,6 @@
 {
   "name": "finance-sls-lambda-node-db",
-  "version": "0.2.0",
+  "version": "0.1.2",
   "description": "handles aws cognito and postgresql rds requests with lamb",
   "scripts": {
     "test": "jest",
