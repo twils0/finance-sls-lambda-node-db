@@ -4,7 +4,7 @@ const { addUser } = require('../../../functions/db/addUser');
 const { signUp } = require('../../../functions/aws/signUp');
 const { errorResponse } = require('../../../functions/errorResponse');
 
-// receive an SNS message, after Stipe has verified that a new user's
+// receive an SNS message, after Stipe has verified that the new user's
 // username (email) does not already exist in Cognito and after the
 // user has been added as a customer to Stripe; add the new user
 // to Cogntio and to the database
