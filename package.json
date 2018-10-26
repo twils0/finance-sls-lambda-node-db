@@ -1,7 +1,16 @@
 {
   "name": "finance-sls-lambda-node-db",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "api to handle sign up, login, and database workflows, using aws lambda functions (node), managed by serverless",
+  "author": "twils0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/twils0/finance-sls-lambda-node-db.git"
+  },
+  "bugs": {
+    "url": "https://github.com/twils0/finance-sls-lambda-node-db/issues"
+  },
+  "homepage": "https://github.com/twils0/finance-sls-lambda-node-db#readme",
   "scripts": {
     "test": "jest",
     "test_watch": "jest --watch"
@@ -15,16 +24,6 @@
       "<rootDir>/node_modules"
     ]
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/twils0/finance-sls-lambda-node-db.git"
-  },
-  "author": "Tyler Wilson",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/twils0/finance-sls-lambda-node-db/issues"
-  },
-  "homepage": "https://github.com/twils0/finance-sls-lambda-node-db#readme",
   "dependencies": {
     "axios": "^0.18.0",
     "fast-equals": "^1.3.1",
