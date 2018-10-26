@@ -1,7 +1,7 @@
 {
   "name": "finance-sls-lambda-node-db",
-  "version": "0.1.2",
-  "description": "handles aws cognito and postgresql rds requests with lamb",
+  "version": "0.1.3",
+  "description": "api to handle sign up, login, and database workflows, using aws lambda functions (node), managed by serverless",
   "scripts": {
     "test": "jest",
     "test_watch": "jest --watch"
