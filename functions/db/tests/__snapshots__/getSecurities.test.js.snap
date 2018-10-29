@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`functions db getSecurities fails and returns unexpected error, when global.pool.query throws error first query 1`] = `
+"SELECT security_id, security_order
+        FROM \\"user\\".\\"join_user_security\\"
+        WHERE user_id = $1::uuid;"
+`;
+
+exports[`functions db getSecurities fails and returns unexpected error, when global.pool.query throws error second query 1`] = `
+"SELECT security_id, security_order
+        FROM \\"user\\".\\"join_user_security\\"
+        WHERE user_id = $1::uuid;"
+`;
+
+exports[`functions db getSecurities fails and returns unexpected error, when global.pool.query throws error second query 2`] = `
+"SELECT security_id, name, exchange, ticker_cusip, category
+        FROM security.security
+        WHERE security_id IN (SELECT(UNNEST($1::uuid[])));"
+`;
+
+exports[`functions db getSecurities fails and returns unexpected error, when global.pool.query throws error second query 3`] = `
+"SELECT security_id, security_order
+        FROM \\"user\\".\\"join_user_security\\"
+        WHERE user_id = $1::uuid;"
+`;
+
+exports[`functions db getSecurities fails and returns unexpected error, when global.pool.query throws error second query 4`] = `
+"SELECT security_id, name, exchange, ticker_cusip, category
+        FROM security.security
+        WHERE security_id IN (SELECT(UNNEST($1::uuid[])));"
+`;
+
+exports[`functions db getSecurities fails and returns unexpected error, when global.pool.query throws error second query 5`] = `
+"SELECT security_current FROM \\"user\\".\\"user\\"
+        WHERE user_id = $1::uuid;"
+`;
+
+exports[`functions db getSecurities returns correct securities object 1`] = `
+"SELECT security_id, security_order
+        FROM \\"user\\".\\"join_user_security\\"
+        WHERE user_id = $1::uuid;"
+`;
+
+exports[`functions db getSecurities returns correct securities object 2`] = `
+"SELECT security_id, name, exchange, ticker_cusip, category
+        FROM security.security
+        WHERE security_id IN (SELECT(UNNEST($1::uuid[])));"
+`;
+
+exports[`functions db getSecurities returns correct securities object 3`] = `
+"SELECT security_current FROM \\"user\\".\\"user\\"
+        WHERE user_id = $1::uuid;"
+`;
+
+exports[`functions db getSecurities returns corrected security_current, when user table query is empty 1`] = `
+"SELECT security_id, security_order
+        FROM \\"user\\".\\"join_user_security\\"
+        WHERE user_id = $1::uuid;"
+`;
+
+exports[`functions db getSecurities returns corrected security_current, when user table query is empty 2`] = `
+"SELECT security_id, name, exchange, ticker_cusip, category
+        FROM security.security
+        WHERE security_id IN (SELECT(UNNEST($1::uuid[])));"
+`;
+
+exports[`functions db getSecurities returns corrected security_current, when user table query is empty 3`] = `
+"SELECT security_current FROM \\"user\\".\\"user\\"
+        WHERE user_id = $1::uuid;"
+`;
+
+exports[`functions db getSecurities returns corrected security_current, when user table response has security_current not in list 1`] = `
+"SELECT security_id, security_order
+        FROM \\"user\\".\\"join_user_security\\"
+        WHERE user_id = $1::uuid;"
+`;
+
+exports[`functions db getSecurities returns corrected security_current, when user table response has security_current not in list 2`] = `
+"SELECT security_id, name, exchange, ticker_cusip, category
+        FROM security.security
+        WHERE security_id IN (SELECT(UNNEST($1::uuid[])));"
+`;
+
+exports[`functions db getSecurities returns corrected security_current, when user table response has security_current not in list 3`] = `
+"SELECT security_current FROM \\"user\\".\\"user\\"
+        WHERE user_id = $1::uuid;"
+`;
+
+exports[`functions db getSecurities returns empty securities object, when security table query is empty 1`] = `
+"SELECT security_id, security_order
+        FROM \\"user\\".\\"join_user_security\\"
+        WHERE user_id = $1::uuid;"
+`;

@@ -1,6 +1,6 @@
 {
   "name": "finance-sls-lambda-node-db",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "api to handle sign up, login, and database workflows, using aws lambda functions (node), managed by serverless",
   "author": "twils0",
   "repository": {
@@ -13,6 +13,7 @@
   "homepage": "https://github.com/twils0/finance-sls-lambda-node-db#readme",
   "scripts": {
     "test": "jest",
+    "test_coverage": "jest -- --coverage",
     "test_watch": "jest --watch"
   },
   "jest": {

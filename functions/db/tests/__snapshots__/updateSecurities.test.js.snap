@@ -1,0 +1,177 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`functions db updateSecurities fails and returns unexpected error, when global.pool.query throws error fifth query 1`] = `
+"SELECT security_current FROM \\"user\\".\\"user\\"
+          WHERE user_id = $1::uuid;"
+`;
+
+exports[`functions db updateSecurities fails and returns unexpected error, when global.pool.query throws error fifth query 2`] = `
+"SELECT security_id FROM \\"user\\".\\"join_user_security\\"
+          WHERE user_id = $1::uuid;"
+`;
+
+exports[`functions db updateSecurities fails and returns unexpected error, when global.pool.query throws error fifth query 3`] = `
+"UPDATE \\"user\\".\\"user\\"
+          SET security_current = $2::uuid
+          WHERE user_id = $1::uuid;"
+`;
+
+exports[`functions db updateSecurities fails and returns unexpected error, when global.pool.query throws error fifth query 4`] = `
+"DELETE FROM \\"user\\".\\"join_user_security\\"
+          WHERE user_id = $1::uuid;"
+`;
+
+exports[`functions db updateSecurities fails and returns unexpected error, when global.pool.query throws error fifth query 5`] = `
+"INSERT INTO \\"user\\".\\"join_user_security\\" (user_id, security_id, security_order)
+          VALUES($1::uuid, UNNEST($2::uuid[]), UNNEST($3::int2[]));"
+`;
+
+exports[`functions db updateSecurities fails and returns unexpected error, when global.pool.query throws error first query 1`] = `
+"SELECT security_current FROM \\"user\\".\\"user\\"
+          WHERE user_id = $1::uuid;"
+`;
+
+exports[`functions db updateSecurities fails and returns unexpected error, when global.pool.query throws error fourth query 1`] = `
+"SELECT security_current FROM \\"user\\".\\"user\\"
+          WHERE user_id = $1::uuid;"
+`;
+
+exports[`functions db updateSecurities fails and returns unexpected error, when global.pool.query throws error fourth query 2`] = `
+"SELECT security_id FROM \\"user\\".\\"join_user_security\\"
+          WHERE user_id = $1::uuid;"
+`;
+
+exports[`functions db updateSecurities fails and returns unexpected error, when global.pool.query throws error fourth query 3`] = `
+"UPDATE \\"user\\".\\"user\\"
+          SET security_current = $2::uuid
+          WHERE user_id = $1::uuid;"
+`;
+
+exports[`functions db updateSecurities fails and returns unexpected error, when global.pool.query throws error fourth query 4`] = `
+"DELETE FROM \\"user\\".\\"join_user_security\\"
+          WHERE user_id = $1::uuid;"
+`;
+
+exports[`functions db updateSecurities fails and returns unexpected error, when global.pool.query throws error second query 1`] = `
+"SELECT security_current FROM \\"user\\".\\"user\\"
+          WHERE user_id = $1::uuid;"
+`;
+
+exports[`functions db updateSecurities fails and returns unexpected error, when global.pool.query throws error second query 2`] = `
+"SELECT security_id FROM \\"user\\".\\"join_user_security\\"
+          WHERE user_id = $1::uuid;"
+`;
+
+exports[`functions db updateSecurities fails and returns unexpected error, when global.pool.query throws error third query 1`] = `
+"SELECT security_current FROM \\"user\\".\\"user\\"
+          WHERE user_id = $1::uuid;"
+`;
+
+exports[`functions db updateSecurities fails and returns unexpected error, when global.pool.query throws error third query 2`] = `
+"SELECT security_id FROM \\"user\\".\\"join_user_security\\"
+          WHERE user_id = $1::uuid;"
+`;
+
+exports[`functions db updateSecurities fails and returns unexpected error, when global.pool.query throws error third query 3`] = `
+"UPDATE \\"user\\".\\"user\\"
+          SET security_current = $2::uuid
+          WHERE user_id = $1::uuid;"
+`;
+
+exports[`functions db updateSecurities updates current security and list, when security_current and joinList do not match in each case 1`] = `
+"SELECT security_current FROM \\"user\\".\\"user\\"
+          WHERE user_id = $1::uuid;"
+`;
+
+exports[`functions db updateSecurities updates current security and list, when security_current and joinList do not match in each case 2`] = `
+"SELECT security_id FROM \\"user\\".\\"join_user_security\\"
+          WHERE user_id = $1::uuid;"
+`;
+
+exports[`functions db updateSecurities updates current security and list, when security_current and joinList do not match in each case 3`] = `
+"UPDATE \\"user\\".\\"user\\"
+          SET security_current = $2::uuid
+          WHERE user_id = $1::uuid;"
+`;
+
+exports[`functions db updateSecurities updates current security and list, when security_current and joinList do not match in each case 4`] = `
+"DELETE FROM \\"user\\".\\"join_user_security\\"
+          WHERE user_id = $1::uuid;"
+`;
+
+exports[`functions db updateSecurities updates current security and list, when security_current and joinList do not match in each case 5`] = `
+"INSERT INTO \\"user\\".\\"join_user_security\\" (user_id, security_id, security_order)
+          VALUES($1::uuid, UNNEST($2::uuid[]), UNNEST($3::int2[]));"
+`;
+
+exports[`functions db updateSecurities updates current security, when securityCurrent does not match 1`] = `
+"SELECT security_current FROM \\"user\\".\\"user\\"
+          WHERE user_id = $1::uuid;"
+`;
+
+exports[`functions db updateSecurities updates current security, when securityCurrent does not match 2`] = `
+"SELECT security_id FROM \\"user\\".\\"join_user_security\\"
+          WHERE user_id = $1::uuid;"
+`;
+
+exports[`functions db updateSecurities updates current security, when securityCurrent does not match 3`] = `
+"UPDATE \\"user\\".\\"user\\"
+          SET security_current = $2::uuid
+          WHERE user_id = $1::uuid;"
+`;
+
+exports[`functions db updateSecurities updates current security, when user table response is empty 1`] = `
+"SELECT security_current FROM \\"user\\".\\"user\\"
+          WHERE user_id = $1::uuid;"
+`;
+
+exports[`functions db updateSecurities updates current security, when user table response is empty 2`] = `
+"SELECT security_id FROM \\"user\\".\\"join_user_security\\"
+          WHERE user_id = $1::uuid;"
+`;
+
+exports[`functions db updateSecurities updates current security, when user table response is empty 3`] = `
+"UPDATE \\"user\\".\\"user\\"
+          SET security_current = $2::uuid
+          WHERE user_id = $1::uuid;"
+`;
+
+exports[`functions db updateSecurities updates list, when join table response is empty 1`] = `
+"SELECT security_current FROM \\"user\\".\\"user\\"
+          WHERE user_id = $1::uuid;"
+`;
+
+exports[`functions db updateSecurities updates list, when join table response is empty 2`] = `
+"SELECT security_id FROM \\"user\\".\\"join_user_security\\"
+          WHERE user_id = $1::uuid;"
+`;
+
+exports[`functions db updateSecurities updates list, when join table response is empty 3`] = `
+"DELETE FROM \\"user\\".\\"join_user_security\\"
+          WHERE user_id = $1::uuid;"
+`;
+
+exports[`functions db updateSecurities updates list, when join table response is empty 4`] = `
+"INSERT INTO \\"user\\".\\"join_user_security\\" (user_id, security_id, security_order)
+          VALUES($1::uuid, UNNEST($2::uuid[]), UNNEST($3::int2[]));"
+`;
+
+exports[`functions db updateSecurities updates list, when joinList does not match 1`] = `
+"SELECT security_current FROM \\"user\\".\\"user\\"
+          WHERE user_id = $1::uuid;"
+`;
+
+exports[`functions db updateSecurities updates list, when joinList does not match 2`] = `
+"SELECT security_id FROM \\"user\\".\\"join_user_security\\"
+          WHERE user_id = $1::uuid;"
+`;
+
+exports[`functions db updateSecurities updates list, when joinList does not match 3`] = `
+"DELETE FROM \\"user\\".\\"join_user_security\\"
+          WHERE user_id = $1::uuid;"
+`;
+
+exports[`functions db updateSecurities updates list, when joinList does not match 4`] = `
+"INSERT INTO \\"user\\".\\"join_user_security\\" (user_id, security_id, security_order)
+          VALUES($1::uuid, UNNEST($2::uuid[]), UNNEST($3::int2[]));"
+`;
