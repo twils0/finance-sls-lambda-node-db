@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`functions aws ses sendEmail fails and returns Email Not Sent, invalid fromEmail 1`] = `[MockFunction]`;
+
+exports[`functions aws ses sendEmail fails and returns Email Not Sent, no body 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "Email Not Sent - no body provided",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+  ],
+}
+`;
+
+exports[`functions aws ses sendEmail fails and returns Email Not Sent, no emailAddresses 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "Email Not Sent - no email addresses provided",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+  ],
+}
+`;
+
+exports[`functions aws ses sendEmail sendEmail fails and returns unexpected error 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "unexpected error - failed to send email - toTest0@test.com",
+      "
+",
+      Object {
+        "code": "testCode",
+        "message": "testMessage",
+      },
+    ],
+    Array [
+      "unexpected error - failed to send email - toTest1@test.com",
+      "
+",
+      Object {
+        "code": "testCode",
+        "message": "testMessage",
+      },
+    ],
+  ],
+  "results": Array [
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+  ],
+}
+`;
