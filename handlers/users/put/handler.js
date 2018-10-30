@@ -9,10 +9,10 @@ const { sendTemplatedEmail } = require('../../../functions/aws/ses/sendTemplated
 const { errorResponse } = require('../../../functions/errorResponse');
 
 // update the user's current (last viewed) securityId, the list of
-// securityIds to which the user is subscribed, the user's email
-// and/or the user's emailAdditional; send a verification email
-// if the user's email or emailAdditional has been updated, to
-// verify any new email addresses
+// securityIds to which the user is subscribed, and/or the user's
+// name, phone, email and/or emailAdditional; if the user's email
+// or emailAdditional has been updated, send a verification email
+// to verify any new email addresses
 module.exports.put = async (event, context, callback) => {
   let error = null;
   const { accessToken } = event.query;

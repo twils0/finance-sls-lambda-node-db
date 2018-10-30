@@ -5,7 +5,8 @@ const { errorResponse } = require('../../../functions/errorResponse');
 
 // get the user's current (last viewed) securityId, a list of the user's
 // subscribed securityIds, and objects for each security, with basic
-// information related to that security
+// information (ticker, name, sector/category, exchange, etc.) related to
+// that security
 module.exports.get = async (event, context, callback) => {
   let error = null;
   const { accessToken } = event.query;
