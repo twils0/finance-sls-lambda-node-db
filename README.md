@@ -6,4 +6,32 @@ The overall project allows users to search for equities, by ticker, name, sector
 
 finance-sls-lambda-node-db is a collection of AWS Lambda functions (Node), managed by Serverless, that handle API calls from a client and then interact with AWS Cognito and a PostgreSQL database, hosted on AWS RDS.
 
-Each Lambda function handles an API call from a different HTTP method from AWS API Gateway. API Gateway authenticates using AWS Cognito, checking the idToken provided by the client. Several functions also authenticates with AWS Cognito a second time, verifying the accessToken provided by the client, which is updated much more frequently than idToken.
+Each Lambda function handles API calls from AWS API Gateway. API Gateway authenticates certain functions using AWS Cognito, verifying the 'id' token provided by the client. These functions are then authenticated with AWS Cognito a second time, verifying the 'access' token provided by the client, which is updated much more frequently than the 'id' token.
+
+API Gateway:
+
+- /emails
+
+  - POST - (authenticated) starts the verification process for a primary email address and/or an additional email address
+
+  - PUT - verifies an email address, if not already verified
+
+- /securities
+
+  - /securities/search
+
+    - GET - (authenticated) runs a PostgreSQL full text search of securities, by ticker, name, sector/category, or exchange, based on the 'search' param provided
+
+- /users
+
+  - DELETE - (authenticated) deletes a user from the database
+
+  - GET - (authenticated) get the user's current (last viewed) security, a list of the securities to which the user is subscribed, and basic information (ticker, name, sector/category, exchange, etc.) on each security to which the user is subscribed
+
+  - PUT - (authenticated) update the user's current (last viewed) security, the list of securities to which the user is subscribed, and/or user attribues (name, phone, email, and/or additional email)
+
+SNS:
+
+- forwardEmails - formats and forwards research emails relevant to a perticular security
+
+- signUpUser - receives an SNS message from finance-sls-lambda-node-stripe and adds a user to Cogntio and to the database

@@ -1,6 +1,6 @@
 {
   "name": "finance-sls-lambda-node-db",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "api to handle sign up, login, and database workflows, using aws lambda functions (node), managed by serverless",
   "author": "twils0",
   "repository": {
