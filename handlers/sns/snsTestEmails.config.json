@@ -1,4 +1,4 @@
 {
-  "signUpEmails": ["test1@test.com", "twils0@protonmail.com", "brentontylerwilson@gmail.com"],
-  "forwardEmails": ["twils0@protonmail.com", "brentontylerwilson@gmail.com"]
+  "signUpEmails": ["test1@test.com", "test2@test.com"],
+  "forwardEmails": ["test3@test.com", "test4@test.com"]
 }
